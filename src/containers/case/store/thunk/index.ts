@@ -8,7 +8,7 @@ export const onThunkCase = (): ThunkActionTypes => async dispatch => {
 
   try {
     const res  = await exampleService.getCase();
-    console.log('res',res);
+    
       if (res) {
         dispatch(fetchDaTaCase(res));
       } 

@@ -2,18 +2,11 @@ import React from 'react';
 import {View, Text, StyleSheet, ScrollView, Dimensions} from 'react-native';
 
 import {pxToPercentage} from '../../core/libs/utils';
-import {datafake} from '../../core/data/datafake';
 const win = Dimensions.get('window');
 import DataByDateComponent from '../../components/data-by-date.component';
-import { textStyle } from '../../components/text-styles';
+import {textStyle} from '../../components/text-styles';
 interface CaseData {
   id: number;
-  case: string;
-  demo: string;
-}
-const dataAll: CaseData[] = datafake;
-
-interface ItemComponentProps {
   case: string;
   demo: string;
 }
@@ -24,10 +17,8 @@ const CaseComponent = (): JSX.Element => {
       style={{
         flex: 1,
       }}>
-      <Text style={styles.h1}>
-        Your case
-      </Text>
-      <ScrollView >
+      <Text style={styles.h1}>Your case</Text>
+      <ScrollView>
         <View style={styles.container}>
           <DataByDateComponent />
           <DataByDateComponent />

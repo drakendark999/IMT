@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {datafake} from '../core/data/datafake';
 import {CaseData} from '../core/models/case/case.model';
-const dataAll: CaseData[] = datafake;
+
 import ItemComponent from './item-case.component';
 import {pxToPercentage} from '../core/libs/utils';
 import {useDispatch, useSelector} from 'react-redux';
@@ -10,7 +10,7 @@ import {onThunkCase} from '../containers/case/store/thunk';
 import {AppState} from '../core/store';
 
 import {textStyle} from './text-styles';
-console.log('text', textStyle.proTextBlack);
+
 
 const DataByDateComponent = (): JSX.Element => {
   const dispatch = useDispatch();

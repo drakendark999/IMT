@@ -7,15 +7,12 @@ export default class ApiService {
   }
 
   private apiRun<T>(url: string): Promise<T> {
-    
-
     return new Promise<T>((resolve, reject) => {
       const dataRef = ref(database, url);
       onValue(dataRef, snapshot => {
         const data = snapshot.val();
         const dataArray = Object.values(data);
-        resolve(dataArray as T)
-        console.log('Data array:', dataArray);
+        resolve(dataArray as T);
       });
     });
   }
